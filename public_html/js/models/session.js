@@ -5,10 +5,16 @@ define([
 ) {
 
     var SessionModel = Backbone.Model.extend({
-        url: '/api/v1/session',
+        url: 'http://private-4133d4-technopark.apiary-mock.com/api/session',
+
+        initialize: function(){
+            this.on('destroy', _.bind(function(){
+                this.clear();
+            }, this));
+        },
 
         isAuth: function(){
-            return !!this.id;
+            return this.id !== undefined;
         },
 
         validate: function(attrs, options){
@@ -40,6 +46,6 @@ define([
         }
     });
 
-    return new SessionModel;
+    return SessionModel;
 
 });

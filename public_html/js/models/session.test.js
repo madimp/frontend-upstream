@@ -32,7 +32,6 @@ define(function (require) {
         var server = sinon.fakeServer.create();
 
         var SessionModel = require('./session'),
-            Backbone = require('backbone'),
             session = new SessionModel();
 
         session.fetch({
@@ -54,7 +53,6 @@ define(function (require) {
         var server = sinon.fakeServer.create();
 
         var SessionModel = require('./session'),
-            Backbone = require('backbone'),
             session = new SessionModel();
 
         session.fetch({
@@ -72,11 +70,10 @@ define(function (require) {
         );
     });
 
-    QUnit.test("авторизация", function ( assert ) {
+    QUnit.test("авторизация - удалась", function ( assert ) {
         var server = sinon.fakeServer.create();
 
         var SessionModel = require('./session'),
-            Backbone = require('backbone'),
             session = new SessionModel();
 
         session.set({
@@ -86,7 +83,7 @@ define(function (require) {
 
         session.save(null, {
             complete: function(){
-                assert.equal(session.isAuth(), true, 'Юзер не авторизован');
+                assert.equal(session.isAuth(), true, 'Юзер авторизован');
                 server.restore();
                 done();
             }
@@ -99,11 +96,10 @@ define(function (require) {
         );
     });
 
-    QUnit.test("авторизация", function ( assert ) {
+    QUnit.test("авторизация - не удалась", function ( assert ) {
         var server = sinon.fakeServer.create();
 
         var SessionModel = require('./session'),
-            Backbone = require('backbone'),
             session = new SessionModel();
 
         session.set({
@@ -125,4 +121,92 @@ define(function (require) {
             JSON.stringify({})
         );
     });
+
+    QUnit.test("логаут", function ( assert ) {
+        var server = sinon.fakeServer.create();
+
+        var SessionModel = require('./session'),
+            session = new SessionModel();
+
+        session.set({
+           email: 'aaa@aaa.aa',
+           password: 'aaaa'
+        });
+
+        session.save(null, {
+            complete: function(){
+                session.destroy({
+                    complete: function(){
+                        assert.equal(session.isAuth(), false, 'Юзер авторизован');
+                        server.restore();
+                        done();
+                    }
+                });
+
+                server.requests[1].respond(
+                    200,
+                    { "Content-Type": "application/json" },
+                    JSON.stringify({})
+                );
+            }
+        });
+
+        server.requests[0].respond(
+            200,
+            { "Content-Type": "application/json" },
+            JSON.stringify({id: 7})
+        );
+    });
+
+    QUnit.test("логин после логаута", function ( assert ) {
+        var server = sinon.fakeServer.create();
+
+        var SessionModel = require('./session'),
+            session = new SessionModel();
+
+        session.set({
+           email: 'aaa@aaa.aa',
+           password: 'aaaa'
+        });
+
+        session.save(null, {
+            complete: function(){
+                session.destroy({
+                    complete: function(){
+                        session.set({
+                           email: 'aaa@aaa.aa',
+                           password: 'aaaa'
+                        });
+
+                        session.save(null, {
+                            complete: function(){
+                                assert.equal(session.isAuth(), true, 'Юзер авторизован');
+                                server.restore();
+                                done();
+                            }
+                        });
+
+                        server.requests[2].respond(
+                            200,
+                            { "Content-Type": "application/json" },
+                            JSON.stringify({id: 7})
+                        );
+                    }
+                });
+
+                server.requests[1].respond(
+                    200,
+                    { "Content-Type": "application/json" },
+                    JSON.stringify({})
+                );
+            }
+        });
+
+        server.requests[0].respond(
+            200,
+            { "Content-Type": "application/json" },
+            JSON.stringify({id: 7})
+        );
+    });
+
 });
