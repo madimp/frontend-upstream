@@ -1,28 +1,31 @@
 define([
     'backbone',
-    'tmpl/login'
+    'tmpl/login',
+    'views/blocks/LoginForm'
 ], function(
     Backbone,
-    tmpl
+    tmpl,
+    LoginForm
 ){
 
     var View = Backbone.View.extend({
 
         template: tmpl,
-        initialize: function () {
-            // TODO
+        initialize: function (options) {
+            this.login = new LoginForm(options);
+            this.render();
         },
         render: function () {
-            // TODO
+            this.$el.append(this.login.$el);
         },
         show: function () {
-            // TODO
+            this.$el.show();
         },
         hide: function () {
-            // TODO
+            this.$el.hide();
         }
 
     });
 
-    return new View();
+    return View;
 });

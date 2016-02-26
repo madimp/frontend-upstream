@@ -20,7 +20,8 @@ require.config({
 
 var tests = [
     'models/score.test',
-    'models/session.test'
+    'models/session.test',
+    'views/blocks/LoginForm.test'
 ];
 
 require(tests, function () {
