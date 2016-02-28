@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="eff94782-72c9-4153-b901-4909c59300c5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/js/models/session.test.js" afterPath="$PROJECT_DIR$/public_html/js/models/session.test.js" />
     </list>
     <ignored path="frontend-upstream.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,122 +25,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="score.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_html/js/models/score.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="session.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_html/js/models/session.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-              <folding>
-                <element signature="e#211#325#0" expanded="false" />
-                <element signature="e#354#407#0" expanded="false" />
-                <element signature="e#452#1270#0" expanded="false" />
-                <element signature="e#742#1192#0" expanded="false" />
-                <element signature="e#846#1178#0" expanded="false" />
-                <element signature="e#890#999#0" expanded="false" />
-                <element signature="e#1052#1160#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.04784689">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_html/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.625">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_html/js/views/login.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.0">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="session.test.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="session.test.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public_html/js/models/session.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="159" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.1146789">
+              <caret line="30" column="72" selection-start-line="30" selection-start-column="72" selection-end-line="30" selection-end-column="72" />
               <folding>
                 <element signature="e#111#1321#0" expanded="false" />
-                <element signature="e#1397#1910#0" expanded="false" />
-                <element signature="e#1562#1754#0" expanded="false" />
-                <element signature="e#1987#2507#0" expanded="false" />
-                <element signature="e#2152#2346#0" expanded="false" />
-                <element signature="e#2571#3188#0" expanded="false" />
-                <element signature="e#2734#2805#0" expanded="false" />
-                <element signature="e#2836#3027#0" expanded="false" />
-                <element signature="e#3255#3871#0" expanded="false" />
-                <element signature="e#3418#3489#0" expanded="false" />
-                <element signature="e#3520#3715#0" expanded="false" />
-                <element signature="e#3920#4868#0" expanded="false" />
-                <element signature="e#4083#4154#0" expanded="false" />
-                <element signature="e#4185#4707#0" expanded="false" />
-                <element signature="e#4219#4697#0" expanded="false" />
-                <element signature="e#4253#4493#0" expanded="false" />
-                <element signature="e#4930#6446#0" expanded="false" />
-                <element signature="e#5305#6053#0" expanded="false" />
+                <element signature="e#1397#1886#0" expanded="false" />
+                <element signature="e#1562#1730#0" expanded="false" />
+                <element signature="e#1963#2459#0" expanded="false" />
+                <element signature="e#2128#2298#0" expanded="false" />
+                <element signature="e#2523#3116#0" expanded="false" />
+                <element signature="e#2686#2757#0" expanded="false" />
+                <element signature="e#2788#2955#0" expanded="false" />
+                <element signature="e#3183#3775#0" expanded="false" />
+                <element signature="e#3346#3417#0" expanded="false" />
+                <element signature="e#3448#3619#0" expanded="false" />
+                <element signature="e#3824#4740#0" expanded="false" />
+                <element signature="e#3987#4058#0" expanded="false" />
+                <element signature="e#4089#4579#0" expanded="false" />
+                <element signature="e#4199#4347#0" expanded="false" />
+                <element signature="e#4802#6278#0" expanded="false" />
+                <element signature="e#5067#6117#0" expanded="false" />
+                <element signature="e#5381#5628#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="router.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_html/js/router.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.037037">
-              <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-              <folding>
-                <element signature="e#127#364#0" expanded="false" />
-                <element signature="e#919#1102#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gruntfile.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gruntfile.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -156,6 +66,7 @@
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/public_html/js/router.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/public_html/js/models/session.test.js" />
       </list>
     </option>
   </component>
@@ -305,7 +216,42 @@
     <property name="WebServerToolWindowFactoryState" value="true" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
       <method />
     </configuration>
   </component>
@@ -340,7 +286,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -354,7 +302,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.6651376">
           <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
           <folding />
         </state>
@@ -376,14 +324,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/js/views/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_html/js/models/score.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -392,36 +332,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/js/models/session.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="159" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
-          <folding>
-            <element signature="e#111#1321#0" expanded="false" />
-            <element signature="e#1397#1910#0" expanded="false" />
-            <element signature="e#1562#1754#0" expanded="false" />
-            <element signature="e#1987#2507#0" expanded="false" />
-            <element signature="e#2152#2346#0" expanded="false" />
-            <element signature="e#2571#3188#0" expanded="false" />
-            <element signature="e#2734#2805#0" expanded="false" />
-            <element signature="e#2836#3027#0" expanded="false" />
-            <element signature="e#3255#3871#0" expanded="false" />
-            <element signature="e#3418#3489#0" expanded="false" />
-            <element signature="e#3520#3715#0" expanded="false" />
-            <element signature="e#3920#4868#0" expanded="false" />
-            <element signature="e#4083#4154#0" expanded="false" />
-            <element signature="e#4185#4707#0" expanded="false" />
-            <element signature="e#4219#4697#0" expanded="false" />
-            <element signature="e#4253#4493#0" expanded="false" />
-            <element signature="e#4930#6446#0" expanded="false" />
-            <element signature="e#5305#6053#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_html/js/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.037037">
+        <state vertical-scroll-proportion="0.2169059">
           <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
           <folding>
             <element signature="e#127#364#0" expanded="false" />
@@ -448,9 +361,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.04784689">
+        <state vertical-scroll-proportion="-1.1111112">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/js/views/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.215311">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/js/models/session.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1146789">
+          <caret line="30" column="72" selection-start-line="30" selection-start-column="72" selection-end-line="30" selection-end-column="72" />
+          <folding>
+            <element signature="e#111#1321#0" expanded="false" />
+            <element signature="e#1397#1886#0" expanded="false" />
+            <element signature="e#1562#1730#0" expanded="false" />
+            <element signature="e#1963#2459#0" expanded="false" />
+            <element signature="e#2128#2298#0" expanded="false" />
+            <element signature="e#2523#3116#0" expanded="false" />
+            <element signature="e#2686#2757#0" expanded="false" />
+            <element signature="e#2788#2955#0" expanded="false" />
+            <element signature="e#3183#3775#0" expanded="false" />
+            <element signature="e#3346#3417#0" expanded="false" />
+            <element signature="e#3448#3619#0" expanded="false" />
+            <element signature="e#3824#4740#0" expanded="false" />
+            <element signature="e#3987#4058#0" expanded="false" />
+            <element signature="e#4089#4579#0" expanded="false" />
+            <element signature="e#4199#4347#0" expanded="false" />
+            <element signature="e#4802#6278#0" expanded="false" />
+            <element signature="e#5067#6117#0" expanded="false" />
+            <element signature="e#5381#5628#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

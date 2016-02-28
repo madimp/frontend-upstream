@@ -38,7 +38,6 @@ define(function (require) {
             complete: function(){
                 assert.equal(session.isAuth(), false, 'Юзер авторизован');
                 server.restore();
-                done();
             }
         });
 
@@ -59,7 +58,6 @@ define(function (require) {
             complete: function(){
                 assert.equal(session.isAuth(), true, 'Юзер не авторизован');
                 server.restore();
-                done();
             }
         });
 
@@ -85,7 +83,6 @@ define(function (require) {
             complete: function(){
                 assert.equal(session.isAuth(), true, 'Юзер авторизован');
                 server.restore();
-                done();
             }
         });
 
@@ -111,7 +108,6 @@ define(function (require) {
             complete: function(){
                 assert.equal(session.isAuth(), false, 'Юзер не авторизован');
                 server.restore();
-                done();
             }
         });
 
@@ -139,7 +135,6 @@ define(function (require) {
                     complete: function(){
                         assert.equal(session.isAuth(), false, 'Юзер авторизован');
                         server.restore();
-                        done();
                     }
                 });
 
@@ -182,7 +177,6 @@ define(function (require) {
                             complete: function(){
                                 assert.equal(session.isAuth(), true, 'Юзер авторизован');
                                 server.restore();
-                                done();
                             }
                         });
 
