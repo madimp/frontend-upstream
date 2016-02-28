@@ -64,7 +64,23 @@ define([
         },
         onValidateError: function(model, error) {
             // Показываем ошибку ввода
-            this.$errors.html(error);
+            var message = [];
+            var errorMap = {
+                email: {
+                    required: 'Обязательно укажите email',
+                    invalid: 'Неверный формат email-адреса'
+                },
+                password: {
+                    required: 'Пароль не указан',
+                    invalid: 'Слишком короткий пароль'
+                }
+            }
+            for (var i in error) {
+                if (errorMap[i]) {
+                    message.push(errorMap[i][ error[i] ]);
+                }
+            }
+            this.$errors.html(message.join('<br />'));
         }
     });
 

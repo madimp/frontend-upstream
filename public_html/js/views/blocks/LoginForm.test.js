@@ -21,6 +21,13 @@ define(function (require) {
         login.$el.find('.js-form').submit();
         assert.ok(session.save.calledOnce, 'Форма вызывает save');
 
+        session.trigger('invalid', 
+            session,
+            {
+                email: 'reqired', 
+                password: 'reqired'
+            }
+        );
         assert.notEqual(login.$el.find('.js-form-errors').html(), '', 'Показано сообщение об ошибке');
 
     });
