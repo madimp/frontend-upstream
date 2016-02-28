@@ -41,5 +41,13 @@ define([
         }
     });
 
-    return new Router();
+    var router = new Router();
+
+    session.on('change', function(){
+        if (session.isAuth() && loginView.$el.is(':visible')){
+            router.navigate('/');
+        }
+    });
+
+    return router;
 });
