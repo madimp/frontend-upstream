@@ -16,6 +16,8 @@ define([
         session: session
     });
 
+    loginView.$el.appendTo('#page');
+
     var Router = Backbone.Router.extend({
         routes: {
             'scoreboard': 'scoreboardAction',
