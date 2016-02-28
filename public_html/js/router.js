@@ -8,17 +8,19 @@ define([
     LoginView
 ){
 
-    var session = new Session();
+    {
+        var session = new Session();
 
-    window.xsession = session;
+        window.xsession = session;
 
-    session.fetch();
+        session.fetch();
 
-    var loginView = new LoginView({
-        session: session
-    });
+        var loginView = new LoginView({
+            session: session
+        });
 
-    loginView.$el.hide().appendTo('#page');
+        loginView.$el.hide().appendTo('#page');
+    }
 
     var Router = Backbone.Router.extend({
         routes: {
@@ -43,11 +45,13 @@ define([
 
     var router = new Router();
 
-    session.on('change', function(){
-        if (session.isAuth() && loginView.$el.is(':visible')){
-            router.navigate('/');
-        }
-    });
+    {
+        session.on('change', function() {
+            if ( session.isAuth() && loginView.$el.is(':visible') ) {
+                router.navigate('/');
+            }
+        });
+    }
 
     return router;
 });
