@@ -1,8 +1,20 @@
 define([
-    'backbone'
+    'backbone',
+    'models/session',
+    'views/login'
 ], function(
-    Backbone
+    Backbone,
+    Session,
+    LoginView
 ){
+
+    var session = new Session();
+
+    session.fetch();
+
+    var loginView = new LoginView({
+        session: session
+    });
 
     var Router = Backbone.Router.extend({
         routes: {
@@ -21,7 +33,7 @@ define([
             // TODO
         },
         loginAction: function () {
-            // TODO
+            loginView.show();
         }
     });
 
