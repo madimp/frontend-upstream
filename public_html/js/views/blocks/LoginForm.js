@@ -14,7 +14,7 @@ define([
         },
         template: tmpl,
         initialize: function (options) {
-            _.bindAll(this, 'onValidateError');
+            _.bindAll(this, 'onValidateError', 'clear', '_success', '_error');
 
             this.session = options.session;
             this.session.on('invalid', this.onValidateError);
@@ -26,7 +26,9 @@ define([
             this.$email = this.$el.find('.js-input-email');
             this.$password = this.$el.find('.js-input-password');
             this.$errors = this.$el.find('.js-form-errors');
+            this.$form = this.$el.find('.js-form');
         },
+
         getEmail: function() {
             return this.$email.val();
         },
@@ -52,18 +54,17 @@ define([
             
             e.preventDefault();
             
-            var _this = this;
-            this.$errors.html();
-            this.$email.removeClass('invalid');
-            this.$password.removeClass('invalid');
+            this.clear();
 
             this.session.save({
                 email: this.getEmail(),
                 password: this.getPassword()
-            }); // Save по умолчанию вызовет validate
+            }, {
+                success: this._success,
+                error: this._error
+            });
         },
         onValidateError: function(model, error) {
-            // Показываем ошибку ввода
             var message = [];
             var errorMap = {
                 email: {
@@ -81,6 +82,18 @@ define([
                 }
             }
             this.$errors.html(message.join('<br />'));
+        },
+        clear: function() {
+            this.$errors.html('');
+            this.$email.removeClass('invalid');
+            this.$password.removeClass('invalid');
+        },
+        _success: function() {
+            this.trigger('success');
+        },
+        _error: function() {
+            this.$errors.html('На сервере произошла ошибка');
+            this.trigger('error');
         }
     });
 
