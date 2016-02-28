@@ -1,0 +1,16 @@
+<fest:template xmlns:fest="http://fest.mail.ru">
+<form class="js-form" method="" action="get">
+	<div>
+		<div class="js-form-errors"></div>
+		<label>
+			Email<fest:space />
+			<input class="js-input-email" type="text" name="email" />
+		</label>
+		<label>
+			Password<fest:space />
+			<input class="js-input-password" type="text" name="password" />
+		</label>
+		<input type="submit" />
+	</div>
+</form>
+</fest:template>
