@@ -10,13 +10,15 @@ define([
 
     var session = new Session();
 
+    window.xsession = session;
+
     session.fetch();
 
     var loginView = new LoginView({
         session: session
     });
 
-    loginView.$el.appendTo('#page');
+    loginView.$el.hide().appendTo('#page');
 
     var Router = Backbone.Router.extend({
         routes: {
