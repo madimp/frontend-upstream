@@ -10,11 +10,15 @@ define([
 
     var session = new Session();
 
+    window.xsession = session;
+
     session.fetch();
 
     var loginView = new LoginView({
         session: session
     });
+
+    loginView.$el.hide().appendTo('#page');
 
     var Router = Backbone.Router.extend({
         routes: {
@@ -37,5 +41,13 @@ define([
         }
     });
 
-    return new Router();
+    var router = new Router();
+
+    session.on('change', function(){
+        if (session.isAuth() && loginView.$el.is(':visible')){
+            router.navigate('/');
+        }
+    });
+
+    return router;
 });
