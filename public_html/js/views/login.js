@@ -12,17 +12,23 @@ define([
 
         template: tmpl,
         initialize: function (options) {
-            this.login = new LoginForm(options);
-            this.render();
+            this.session = options.session;
         },
         render: function () {
+            this.login = new LoginForm({
+                session: this.session
+            });
             this.$el.append(this.login.$el);
         },
         show: function () {
+            this.render();
             this.$el.show();
         },
         hide: function () {
             this.$el.hide();
+            if (this.login) {
+                this.login.destroy();
+            }
         }
 
     });

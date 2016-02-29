@@ -10,14 +10,14 @@ define([
         events: {
             'submit .js-form': 'onSubmit',
             'input .js-input-email': 'onEmailInput',
-            'input .js-input-password': 'onPasswordInput',
+            'input .js-input-password': 'onPasswordInput'
         },
         template: tmpl,
         initialize: function (options) {
             _.bindAll(this, 'onValidateError', 'clear', '_success', '_error');
 
             this.session = options.session;
-            this.session.on('invalid', this.onValidateError);
+            this.listenTo(this.session, 'invalid', this.onValidateError);
 
             this.render();
         },
@@ -94,6 +94,9 @@ define([
         _error: function() {
             this.$errors.html('На сервере произошла ошибка');
             this.trigger('error');
+        },
+        destroy: function() {
+            this.$el.remove();
         }
     });
 
